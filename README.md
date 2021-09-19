@@ -1,3 +1,3 @@
 # cricket-quiz-friends
  
-This space is for friends-quiz about Cricket.
+This project is about friends-quiz about Cricket.

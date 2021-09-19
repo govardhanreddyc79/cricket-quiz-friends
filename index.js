@@ -12,19 +12,27 @@ var highestScores = [{
   'score': 2 
 }]
 var qsOne = {
-  'qtn':'Which team won the most number of ICC cricket world cups ? ',
+  'qtn':'Which team won the most number of ICC cricket world cups? ',
   'ans':'australia'
 }
 var qsTwo = {
-  'qtn':'Which team has won cricket world cup in 1983 ? ',
+  'qtn':'Which team has won cricket world cup in 1983? ',
   'ans':'india'
 }
 var qsThree = {
-  'qtn':'Which team won the 2019 ICC cricket world cup ? ',
-  'ans':'england'
+  'qtn':'Who won the first ever Cricket World Cup in 1975? ',
+  'ans':'westindies'
+}
+var qsFour = {
+  'qtn':'Who is the first batsman to cross 10,000 runs in tests? ',
+  'ans':'gavaskar'
+}
+var qsFive = {
+  'qtn':'Who is known as Captain Cool? ',
+  'ans':'dhoni'
 }
 
-var questions = [qsOne,qsTwo,qsThree]
+var questions = [qsOne,qsTwo,qsThree, qsFour,qsFive]
 
 for (i=0;i<questions.length;i++){
   var currentQtn = questions[i]
