@@ -1,6 +1,7 @@
+const chalk = require('chalk');
 var readlineSync = require('readline-sync')
-var userName = readlineSync.question('What is your name ? ');
-console.log('Hello ' + userName + ', Welcome to Cricket quiz !!!')
+var userName = readlineSync.question(chalk.yellowBright('What is your name ? '));
+console.log(chalk.magenta('Hello ' + userName + ', Welcome to Cricket quiz !!!'))
 
 score = 0
 
@@ -41,20 +42,21 @@ for (i=0;i<questions.length;i++){
 }
 
 function play(qtn, ans){
-  var userAns = readlineSync.question(qtn);
+  var userAns = readlineSync.question(chalk.cyanBright(qtn));
   if (userAns.toLowerCase() == ans){
-    console.log("You're right !!!")
+    console.log(chalk.green("You're right !!!"))
     score = score+1
-    console.log("Your current score is : "+ score)
+    console.log(chalk.yellow("Your current score is : "+ score))
   }else{
-      console.log("You're wrong !!!")
+      console.log(chalk.red("You're wrong !!!"))
   }
 }
-console.log("Your total score is : "+ score)
+console.log(chalk.yellowBright("Your total score is : "+ score))
 
-console.log("Checkout the highscores. If you should be there, send the screenshot of your score and I'll update in highscore data")
+console.log(chalk.blue("Checkout the highscores. If you should be there, send the screenshot of your score and I'll update in highscore data"))
+
 for (j=0;j<highestScores.length;j++){
   currentItem = highestScores[j];
   console.log(currentItem.name +" : "+ currentItem.score)
 }
-console.log('Thank You !!')
+console.log(chalk.magenta('Thank You !!'))
